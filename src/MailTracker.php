@@ -232,10 +232,10 @@ class MailTracker
      */
     protected function createTrackers(Email $message)
     {
-        foreach ($message->getTo() as $toAddress) {
+        foreach ($message->getTo() ?? [] as $toAddress) {
             $to_email = $toAddress->getAddress();
             $to_name = $toAddress->getName();
-            foreach ($message->getFrom() as $fromAddress) {
+            foreach ($message->getFrom() ?? [] as $fromAddress) {
                 $from_email = $fromAddress->getAddress();
                 $from_name = $fromAddress->getName();
                 $headers = $message->getHeaders();
