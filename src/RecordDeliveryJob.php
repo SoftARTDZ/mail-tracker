@@ -9,6 +9,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use jdavidbakr\MailTracker\Events\EmailDeliveredEvent;
+use jdavidbakr\MailTracker\Model\SentEmail;
 
 class RecordDeliveryJob implements ShouldQueue
 {

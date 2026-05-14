@@ -10,6 +10,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Event;
 use jdavidbakr\MailTracker\Events\PermanentBouncedMessageEvent;
 use jdavidbakr\MailTracker\Events\TransientBouncedMessageEvent;
+use jdavidbakr\MailTracker\Model\SentEmail;
 
 class RecordBounceJob implements ShouldQueue
 {
